@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pl" class="main__html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyszukiwarka napojów</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/c55876ca89.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../dist/css/main.min.css">
+
+</head>
+
+<body>
+
+    <div class="burger-btn">
+        <button class="menu"
+            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+            aria-label="Main Menu">
+            <svg class="svg-menu" width="80" height="80" viewBox="0 0 100 100">
+                <path class="line line1"
+                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3"
+                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+        </button>
+    </div>
+
+
+    <div class="nav-mobile">
+
+
+        <a href="#home" class="nav-mobile__item nav-mobile__item-home">Home</a>
+        <a href="#about-us" class="nav-mobile__item">O nas</a>
+        <a href="#offers" class="nav-mobile__item">Oferta</a>
+        <a href="contact.html#contact" class="nav-mobile__item">Kontakt</a>
+
+    </div>
+
+    <div class="nav-desktop">
+        <div class="nav-desktop__logo">
+            <h2 class="nav-desktop__logo-title"><i class="fas fa-tree"></i> Forest</h2>
+        </div>
+
+        <div class="nav-desktop__items">
+            <a href="#home" class="nav-desktop__items-item nav-desktop__items-item-home">Home</a>
+            <a href="#about-us" class="nav-desktop__items-item">O nas</a>
+            <a href="#offers" class="nav-desktop__items-item">Oferta</a>
+            <a href="contact.html#contact" class="nav-desktop__items-item">Kontakt</a>
+        </div>
+    </div>
+
+
+
+    <header class="header" id="home">
+        <div class="header__shadow">
+            <h1 data-aos="zoom-in" class="header__heading"><span class="header__heading-span">Forest Group</span>Najpiękniejszy park w
+                Twojej
+                okolicy!</h1>
+        </div>
+
+
+    </header>
+
+    <main class="main">
+
+
+        <section class="about-us section-padding" id="about-us">
+
+           <h2 class="section-heading">o nas</h2>
+        
+
+       <div class="about-us__items">
+           <div data-aos="fade-right" class="about-us__items-img"><img src="../dist/img/watersmall.jpg" alt="Krzak na jeziorku"></div>
+           <div class="about-us__items-text">
+               <h2 class="about-us__items-text-title">Niezapomniane przygody</h2>
+               <p class="about-us__items-text-description" data-aos="new-animation">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem fugiat consequuntur reprehenderit quibusdam corporis inventore porro asperiores commodi at iste. Aliquam quasi nemo beatae ut nihil commodi vel corrupti eveniet? Dolorem dolore laudantium ipsam sed blanditiis, optio est, laborum labore nulla architecto exercitationem hic Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime facilis rem labore aspernatur non tempora cumque, aliquam deleniti quidem!</p>
+           </div>
+       </div>
+    
+
+    
+
+
+        </section>
+
+
+
+     <section  class="adventure" >
+         <div class="adventure__shadow">
+             <h2 data-aos="zoom-in" class="adventure__heading ">Przygoda dla całej rodziny</h2>
+         </div>
+     </section>
+
+
+
+
+     <section class="offers section-padding " id="offers">
+         <div class="wrapper">
+            <h2 class="section-heading">Oferta</h2>
+            <p class="offers__description">Wybierz jedną z naszych wspaniałych ofert!</p>
+
+            <div data-aos="fade-up" class="offers__options">
+
+             <div class="offers__options-option  ">
+                 <h3 class="offers__options-option-title">Demo</h3>
+                 <p class="offers__options-option-price">$0</p>
+                     <ul class="offers__options-option-list">
+                         <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
+                         <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
+                         <li class="beyond-package"><i class="fa-solid fa-minus"></i> opcja poza pakietem</li>
+                         <li class="beyond-package"><i class="fa-solid fa-minus"></i> opcja poza pakietem</li>
+                         <li class="beyond-package"><i class="fa-solid fa-minus"></i> opcja poza pakietem</li>
+
+                     </ul>
+
+                     <button class="offers__options-option-btn">Wybierz</button>
+                 
+             </div>
+
+             <div class="offers__options-option ">
+                <h3 class="offers__options-option-title">Standard</h3>
+                <p class="offers__options-option-price">$99</p>
+                    <ul class="offers__options-option-list">
+                        <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
+                        <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
+                        <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
+                        <li class="beyond-package"><i class="fa-solid fa-minus"></i> opcja poza pakietem</li>
+                        <li class="beyond-package"><i class="fa-solid fa-minus"></i> opcja poza pakietem</li>
+
+                    </ul>
+
+                    <button class="offers__options-option-btn offers__options-option-btn--standard">Wybierz</button>
+                
+            </div>
+
+
+            <div class="offers__options-option ">
+                <h3 class="offers__options-option-title">Premium</h3>
+                <p class="offers__options-option-price">$299</p>
+                    <ul class="offers__options-option-list premium-list">
+                        <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
+                        <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
+                        <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
+                        <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
+                        <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
+
+                    </ul>
+                      
+                    <button class="offers__options-option-btn">Wybierz</button>
+                
+            </div>
+
+            </div>
+              
+       
+               <p  data-aos="fade-right" class="offers__site">Więcej naszych ofert znajdziesz <a class="offers__site-link" href="offers.html#offers">tutaj!</a></p>
+        
+         </div>
+     </section>
+
+
+
+     <footer class="footer">
+
+         <div class="wrapper">
+           <div class="footer__items">
+               <div class="footer__items-logo">
+                <h2 class="nav-desktop__logo-title"><i class="fas fa-tree"></i> Forest</h2>
+               </div>
+
+          
+
+         <div class="footer__items-list">
+            <ul>
+                <li>O nas</li>
+                <li><a href="">Historia</a></li>
+                <li><a href="">Parki</a></li>
+                <li><a href="">Opinie</a></li>
+
+                </ul>
+
+                <ul>
+                  <li>Nasza firma</li>
+                  <li><a href="">Praca</a></li>
+                  <li><a href="">Kadry</a></li>
+                  <li><a href="">Zarząd</a></li>
+
+                  </ul>
+
+                  <ul>
+                      <li>Dokumenty</li>
+                      <li><a href="">Wnioski</a></li>
+                      <li><a href="">Rezerwacje</a></li>
+                      
+    
+                      </ul>
+
+         </div>
+              
+           </div>
+         </div>
+
+
+         <hr>
+
+
+         <p class="footer__bottom-text">&copy; <span class="footer__year"></span> Forest Group Company Ltd.</p>
+
+
+     </footer>
+
+
+    </main>
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../dist/js/aos.min.js"></script>
+    <script src="../dist/js/main.min.js"></script>
+</body>
+
+</html>

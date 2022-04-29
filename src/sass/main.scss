@@ -1,0 +1,728 @@
+@import './mixins';
+@import './components';
+@import './aos';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.6rem;
+}
+
+//===Burger btn icon====
+@include burger-btn;
+
+// ===nav===
+
+.nav-mobile {
+	position: fixed;
+	display: flex;
+	top: 0;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	transform: translateY(-100%);
+	transition: 0.5s;
+	background-color: rgb(138, 165, 247);
+	z-index: 99;
+
+	&--active {
+		transform: translateY(0);
+	}
+
+	&__item {
+		padding: 1em 2em;
+		color: white;
+		text-decoration: none;
+		font-size: 2rem;
+
+		&-home {
+			background-color: black;
+			width: 100%;
+			text-align: center;
+			transition: color 0.2s, background-color 0.2s;
+		}
+	}
+}
+
+.nav-desktop {
+	position: relative;
+	height: 105px;
+	display: none;
+	background-color: rgb(255, 255, 255);
+
+	&__logo {
+		position: absolute;
+		left: 15%;
+		top: 28%;
+		font-size: 4.2rem;
+		color: rgb(0, 0, 0);
+		font-weight: 100;
+
+		&-title {
+			color: rgb(0, 0, 0);
+			font-size: 4.2rem;
+			font-weight: 500;
+
+			.fas {
+				color: rgb(35, 52, 35);
+			}
+		}
+	}
+
+	&__items {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		&-item {
+			position: relative;
+			font-size: 2rem;
+			text-decoration: none;
+			color: black;
+			cursor: pointer;
+			padding: 2.1em 2em;
+			font-weight: 500;
+			transition: box-shadow 0.2s;
+
+			&:hover {
+				box-shadow: inset 0px 0px 7px 11px rgba(66, 68, 90, 1);
+			}
+
+			&-home {
+				height: 100%;
+				background-color: black;
+				font-weight: 300;
+
+				color: white;
+			}
+		}
+	}
+}
+
+//====HEADER====
+
+.header {
+	position: relative;
+	height: 50vh;
+	width: 100%;
+	background-image: url('../../dist/img/junglesmall.jpg');
+	background-size: cover;
+	background-position: center;
+
+	&__shadow {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.611);
+	}
+
+	&__heading {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1em;
+		color: rgb(237, 243, 228);
+		font-size: 3rem;
+
+		&-span {
+			font-size: 1.8rem;
+			font-weight: 300;
+		}
+	}
+}
+
+///====ABOUT-US====////
+
+.about-us {
+	position: relative;
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&-img {
+			img {
+				width: 100%;
+			}
+		}
+		&-text {
+			padding-top: 2em;
+			line-height: 30px;
+
+			&-title {
+				padding-bottom: 1em;
+			}
+
+			&-description {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+/////===ADVENTURE===/////
+
+.adventure {
+	display: flex;
+	height: 300px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-image: url('../../dist/img/girlsmall.jpg');
+
+	&__shadow {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.41);
+	}
+
+	&__heading {
+		color: white;
+		border: 1px solid white;
+		padding: 5%;
+	}
+}
+
+//////=====OFFERS====///////
+
+.offers {
+	&__description {
+		text-align: center;
+		font-size: 1.6rem;
+	}
+
+	&__options {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&-option {
+			position: relative;
+			box-shadow: 0px 2px 9px -3px rgba(66, 68, 90, 1);
+			width: 270px;
+			padding: 2em 3em 4em;
+			margin: 2em 1em;
+			border-radius: 8px;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+
+			&-title {
+				text-align: center;
+				font-size: 3rem;
+				font-weight: normal;
+			}
+
+			&-price {
+				text-align: center;
+				font-size: 4rem;
+				font-weight: bold;
+				padding: 0.3em 0;
+			}
+
+			&-list {
+				padding: 0.5em 0 1em 0;
+
+				li {
+					list-style-type: none;
+					font-size: 1.6rem;
+					padding: 0.2em 0;
+
+					.fa-solid {
+						font-size: 1.4rem;
+						padding-right: 0.2em;
+					}
+					.fa-check {
+						color: rgb(105, 212, 105);
+					}
+
+					.fa-minus {
+						color: grey;
+					}
+				}
+
+				.beyond-package {
+					color: grey;
+				}
+			}
+			.premium-list {
+				text-align: center;
+			}
+
+			&-btn {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 60%;
+				padding: 0.5em 0;
+				border-radius: 8px;
+				font-family: 'Raleway', sans-serif;
+				background: none;
+				border: none;
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0px 2px 8px -3px rgba(66, 68, 90, 1);
+				transition: background-color 0.2s, color 0.2s;
+				cursor: pointer;
+
+				&--standard {
+					background-color: rgb(93, 214, 93);
+				}
+
+				&:hover {
+					background-color: royalblue;
+					color: white;
+				}
+			}
+		}
+	}
+
+	&__site {
+		text-align: center;
+		font-size: 1.6rem;
+
+		&-link {
+			cursor: pointer;
+			text-decoration: none;
+			background-color: rgb(93, 214, 93);
+			padding: 0.3em 0.5em;
+			border-radius: 3px;
+			color: black;
+			font-weight: 600;
+			transition: color 0.2s, background-color 0.2s;
+
+			&:hover {
+				background-color: royalblue;
+				color: white;
+			}
+		}
+	}
+}
+
+/////======CONTACT======///////
+
+.contact {
+	position: relative;
+
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form {
+		background-color: rgba(79, 140, 58, 0.672);
+		border-radius: 8px;
+		padding: 2em 2em 4em;
+		margin-top: 2em;
+	}
+
+	&__form-label {
+		text-transform: uppercase;
+		font-weight: bold;
+		color: rgb(108, 104, 104);
+		margin-bottom: 1em;
+	}
+
+	&__form-input {
+		margin-bottom: 1em;
+		border: none;
+		border-radius: 8px;
+		padding: 0.8em;
+		font-size: 1.8rem;
+	}
+
+	&__form-textarea {
+		max-width: 100%;
+		min-width: 100%;
+		height: 300px;
+		max-height: 300px;
+		min-height: 300px;
+		border-radius: 8px;
+		border: none;
+		padding: 1em;
+		font-size: 1.8rem;
+	}
+
+	&__form-btn {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 53%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100px;
+		border: none;
+		padding: 0.5em 1em;
+		border: none;
+		border-radius: 8px;
+		background: none;
+		font-family: 'Raleway', sans-serif;
+		background-color: white;
+		color: royalblue;
+		transition: background-color 0.2s, color 0.2s;
+		font-weight: 500;
+		border: 2px solid royalblue;
+		cursor: pointer;
+
+
+		.fa-solid {
+			margin: 0.17em 0 0 0.3em;
+		}
+
+		
+		&:hover {
+			background-color: royalblue;
+			color: white;
+		}
+	
+	}
+
+	&__form-map {
+		iframe {
+			width: 100%;
+			margin-top: 10em;
+			border-radius: 8px;
+		}
+	}
+}
+
+///////=====FOOTER=====/////
+
+.footer {
+	background-color: rgb(253, 240, 240);
+	&__items {
+		position: relative;
+
+		&-logo {
+			display: none;
+		}
+
+		&-list {
+			display: flex;
+			justify-content: space-evenly;
+			padding: 1em 0;
+
+			ul {
+				li {
+					list-style-type: none;
+					padding: 0.5em 0;
+					a {
+						color: rgb(75, 75, 75);
+						text-decoration: none;
+						cursor: pointer;
+						font-weight: 500;
+					}
+
+					&:first-child {
+						font-weight: bolder;
+						font-size: 2rem;
+						padding: 2em 0 1em;
+					}
+				}
+			}
+		}
+	}
+
+	&__bottom-text {
+		text-align: center;
+		padding: 2em 0;
+		color: rgb(75, 75, 75);
+	}
+}
+
+//========MEDIA=====///
+
+@media (min-width: 768px) {
+	////HEADER /////
+
+	.header {
+		background-image: url('../../dist/img/junglebig.jpg');
+		background-position-y: 70%;
+
+		&__heading {
+			position: absolute;
+			top: 25%;
+			left: 12%;
+			font-size: 4rem;
+
+			&-span {
+				font-size: 2.8rem;
+			}
+		}
+	}
+
+	/////ADVENTURE////
+	.adventure {
+		background-image: url('../../dist/img/girlbig.jpg');
+		height: 400px;
+
+		&__heading {
+			font-size: 3rem;
+			padding: 1em 10%;
+		}
+	}
+
+	////OFFERS//////
+
+	.offers {
+		&__description {
+			font-size: 2rem;
+		}
+		&__options {
+			flex-direction: row;
+			flex-wrap: wrap;
+			&-option {
+				padding: 2em 3em 5em;
+				width: 300px;
+				&-price {
+					font-size: 5rem;
+				}
+
+				&-list {
+					padding-bottom: 1.5em;
+
+					li {
+						font-size: 1.8rem;
+					}
+				}
+
+				&-btn {
+					font-size: 1.8rem;
+				}
+			}
+		}
+
+		&__site {
+			font-size: 1.8rem;
+		}
+	}
+
+	///CONTACT////
+
+	.contact {
+		&__form-btn {
+			display: flex;
+			justify-content: center;
+			top: 54%;
+			padding: 0.5em 4em;
+			font-size: 1.6rem;
+
+			
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	///NAV////
+
+	.nav-mobile {
+		display: none;
+	}
+
+	.nav-desktop {
+		display: block;
+	}
+
+	///// HEADER /////
+
+	.header {
+		&__heading {
+			font-size: 4.8rem;
+
+			&-span {
+				font-size: 2.8rem;
+			}
+		}
+	}
+
+	////ABOUT-US /////
+
+	.about-us {
+		&__items {
+			flex-direction: row;
+			justify-content: space-evenly;
+
+			&-img {
+				img {
+					width: 440px;
+				}
+			}
+
+			&-text {
+				width: 440px;
+				padding-top: 0;
+				line-height: 30px;
+
+				&-title {
+					padding-bottom: 0.5em;
+					font-size: 3rem;
+				}
+			}
+		}
+	}
+
+	////ADVENTURE/////
+	.adventure {
+		&__heading {
+			font-size: 5rem;
+			padding: 1em 12%;
+		}
+	}
+
+	/////OFFERS/////
+	.offers {
+		&__description {
+			font-size: 2.4rem;
+		}
+		&__options {
+			flex-direction: row;
+
+			&-option {
+				margin: 4em 1em 0;
+			}
+		}
+
+		&__site {
+			font-size: 2rem;
+			padding-top: 3em;
+		}
+	}
+
+	///CONTACT////
+
+	.contact {
+		&__form-btn {
+			display: flex;
+			justify-content: center;
+			top: 46%;
+			padding: 0.5em 5em;
+			font-size: 1.8rem;
+		}
+
+		&__form-map {
+			iframe {
+				height: 700px;
+			}
+		}
+	}
+
+	///////FOOTER///////
+	.footer {
+		&__items {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			&-logo {
+				display: block;
+				h2 {
+					font-size: 6rem;
+					margin: 0 0em 1em;
+				}
+			}
+			&-list {
+				ul {
+					padding: 0 2em 2em;
+
+					li {
+						&:first-child {
+							font-size: 2.8rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	////NAV////
+
+	.nav-desktop {
+		margin-right: 16em;
+	}
+
+	///////ABOUT-US/////
+
+	.about-us {
+		&__items {
+			justify-content: center;
+
+			&-img {
+				// padding-right: 4em;
+				img {
+					width: 610px;
+				}
+			}
+
+			&-text {
+				width: 670px;
+				line-height: 40px;
+				margin-left: 5em;
+
+				&-title {
+					padding-bottom: 0.5em;
+					font-size: 3.5rem;
+				}
+				&-description {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+
+	////OFFERS/////
+
+	.offers {
+		&__options {
+			&-option {
+				width: 340px;
+				margin: 4em 1em 0;
+				padding: 2em 3.8em 5em;
+
+				&-list {
+					padding-bottom: 2em;
+					li {
+						font-size: 2rem;
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
+
+	///////FOOTER/////
+
+	.footer {
+		&__items {
+			&-logo {
+				margin-right: 4em;
+			}
+			&-list {
+				margin-left: 4em;
+			}
+		}
+	}
+}
